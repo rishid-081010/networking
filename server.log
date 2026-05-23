@@ -1,0 +1,22 @@
+
+> my-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 2s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.1s (550 modules)
+ GET / 200 in 6721ms
+ ✓ Compiled in 623ms (259 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 5.7s (619 modules)
+⚠️ Supabase env vars missing. Using MOCK fallback mechanism.
+ GET /login 200 in 6146ms
+ GET / 200 in 71ms
+ ○ Compiling /profile ...
+ ✓ Compiled /profile in 512ms (625 modules)
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1172ms (746 modules)
