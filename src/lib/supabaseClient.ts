@@ -1,7 +1,19 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
+
+if (supabaseUrl && !supabaseUrl.startsWith('http')) {
+  supabaseUrl = `https://${supabaseUrl}`;
+}
+
+// Auto-correct if the user accidentally pasted the Supabase Dashboard URL
+if (supabaseUrl && supabaseUrl.includes('supabase.com/dashboard/project/')) {
+  const match = supabaseUrl.match(/project\/([a-z0-9]+)/i);
+  if (match && match[1]) {
+    supabaseUrl = `https://${match[1]}.supabase.co`;
+  }
+}
 
 let mockProfiles: any[] = [];
 let mockUser: any = null;
