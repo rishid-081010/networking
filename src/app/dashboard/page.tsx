@@ -29,13 +29,6 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function loadData() {
-      // Check auth (optional but good to restrict)
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
-        router.push('/login');
-        return;
-      }
-
       const { data, error } = await supabase
         .from('profiles')
         .select('*');

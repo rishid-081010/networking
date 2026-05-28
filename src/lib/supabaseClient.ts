@@ -15,7 +15,52 @@ if (supabaseUrl && supabaseUrl.includes('supabase.com/dashboard/project/')) {
   }
 }
 
-let mockProfiles: any[] = [];
+let mockProfiles: any[] = [
+  {
+    id: 'mock-user-123',
+    name: 'Rishi D',
+    company: 'TechFlow',
+    bio: 'Building developer tools for Next.js. Coffee lover, ex-stripe.',
+    contact_email: 'rishi@example.com',
+    lat: 12.9716,
+    lng: 77.5946,
+    tags: ['Looking for a cofounder', 'Hiring'],
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'mock-founder-2',
+    name: 'Aanya Sharma',
+    company: 'FinSphere',
+    bio: 'Fintech for rural India. Enabling credit access through UPI micro-loans.',
+    contact_email: 'aanya@finsphere.in',
+    lat: 19.0760,
+    lng: 72.8777,
+    tags: ['Seeking investment', 'Hiring'],
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'mock-founder-3',
+    name: 'Kabir Verma',
+    company: 'AgroRoot',
+    bio: 'B2B supply chain platform for fresh produce direct from farms.',
+    contact_email: 'kabir@agroroot.co',
+    lat: 28.6139,
+    lng: 77.2090,
+    tags: ['Looking to collab'],
+    created_at: new Date().toISOString()
+  },
+  {
+    id: 'mock-founder-4',
+    name: 'Pooja Iyer',
+    company: 'HealthVeda',
+    bio: 'AI-assisted personalized Ayurveda and wellness treatments.',
+    contact_email: 'pooja@healthveda.com',
+    lat: 13.0827,
+    lng: 80.2707,
+    tags: ['Mentorship'],
+    created_at: new Date().toISOString()
+  }
+];
 let mockUser: any = null;
 
 const isMock = !supabaseUrl || !supabaseAnonKey;
