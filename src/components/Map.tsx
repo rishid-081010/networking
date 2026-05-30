@@ -80,7 +80,7 @@ export default function Map({ profiles }: MapProps) {
       center={indiaCenter}
       zoom={defaultZoom}
       minZoom={5.8}
-      maxZoom={12}
+      maxZoom={18}
       maxBounds={indiaBounds}
       maxBoundsViscosity={1.0}
       style={{ height: '100%', width: '100%', background: '#f8fafc' }}
