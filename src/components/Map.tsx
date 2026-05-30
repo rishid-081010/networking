@@ -67,19 +67,19 @@ interface MapProps {
 export default function Map({ profiles }: MapProps) {
   // Center roughly on Nagpur (Geographical Center of India)
   const indiaCenter: [number, number] = [21.1458, 79.0882];
-  const defaultZoom = 5.5;
+  const defaultZoom = 5.8;
 
   // Strict geographical bounding box around India's borders
   const indiaBounds: L.LatLngBoundsExpression = [
-    [6.5, 68.0],  // Southwest corner (Gujarat / Southern oceans)
-    [36.5, 98.0]  // Northeast corner (Kashmir / Arunachal Pradesh borders)
+    [8.0, 68.0],  // Southwest corner (Gujarat / Southern tip)
+    [35.5, 97.0]  // Northeast corner (Kashmir / Arunachal Pradesh borders)
   ];
 
   return (
     <MapContainer
       center={indiaCenter}
       zoom={defaultZoom}
-      minZoom={5}
+      minZoom={5.8}
       maxZoom={12}
       maxBounds={indiaBounds}
       maxBoundsViscosity={1.0}
